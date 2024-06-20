@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Students - Student Contact Management</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #f8f9fa; /* Light gray background */
+    }
+    .navbar {
+      background-color: #17a2b8; /* Turquoise blue navbar background */
+    }
+    .navbar-brand, .navbar-nav .nav-link {
+      color: #ffffff; /* White text color for links */
+    }
+    .navbar-brand:hover, .navbar-nav .nav-link:hover {
+      color: #f8f9fa; /* Light gray text color on hover */
+    }
+    .navbar-toggler {
+      border-color: #ffffff; /* White border color for toggler */
+    }
+    .navbar-toggler-icon {
+      background-color: #ffffff; /* White color for toggler icon */
+    }
+    .table {
+      background-color: #ffffff; /* White table background */
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    }
+    .table th, .table td {
+      vertical-align: middle; /* Center table cell content vertically */
+    }
+    .highlight {
+      background-color: #ffeeee !important; /* Light red highlight */
+    }
+    .dataTables_empty {
+      text-align: center; /* Center empty table message */
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Student Management</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="add-student.html">Add Student</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="view-students.html">View Students <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container mt-4">
+    <h1 class="text-center mb-4">View Students</h1>
+    
+    </div>
+    <div class="table-responsive">
+      <table id="studentsTable" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+          <tr>
+            <th>Roll Number</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Address</th>
+            <th>Date of Birth</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Data will be dynamically populated here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Edit Student Modal -->
+  <div class="modal fade" id="editStudentModal" tabindex="-1" aria-labelledby="editStudentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editStudentModalLabel">Edit Student</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="editStudentForm">
+            <input type="hidden" id="editStudentId">
+            <div class="form-group">
+              <label for="editRollNumber">Roll Number</label>
+              <input type="text" class="form-control" id="editRollNumber" required>
+            </div>
+            <div class="form-group">
+              <label for="editFirstName">First Name</label>
+              <input type="text" class="form-control" id="editFirstName" required>
+            </div>
+            <div class="form-group">
+              <label for="editLastName">Last Name</label>
+              <input type="text" class="form-control" id="editLastName" required>
+            </div>
+            <div class="form-group">
+              <label for="editEmail">Email</label>
+              <input type="email" class="form-control" id="editEmail" required>
+            </div>
+            <div class="form-group">
+              <label for="editPhoneNumber">Phone Number</label>
+              <input type="tel" class="form-control" id="editPhoneNumber" required>
+            </div>
+            <div class="form-group">
+              <label for="editAddress">Address</label>
+              <input type="text" class="form-control" id="editAddress" required>
+            </div>
+            <div class="form-group">
+              <label for="editDateOfBirth">Date of Birth</label>
+              <input type="date" class="form-control" id="editDateOfBirth" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- DataTables JS -->
+  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+  <!-- Your custom script -->
+  <script src="script.js"></script>
+</body>
+</html>

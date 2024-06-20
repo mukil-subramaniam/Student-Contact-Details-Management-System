@@ -1,0 +1,65 @@
+/* Global Styles */
+body {
+  background-color: #f8f9fa; /* Light gray background */
+  font-family: Arial, sans-serif; /* Default font family */
+}
+
+.navbar {
+  margin-bottom: 20px; /* Space below navbar */
+}
+
+/* Form Card Styles */
+.card {
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+.card-header {
+  border-radius: 10px 10px 0 0; /* Rounded top corners */
+}
+
+.card-body {
+  padding: 20px; /* Padding inside card body */
+}
+
+/* Form Input Focus Styles */
+.form-control:focus {
+  border-color: #80bdff; /* Focus border color */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Focus box shadow */
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #343a40; /* Dark background */
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: #ffffff; /* White text color */
+}
+
+.navbar-brand:hover,
+.navbar-nav .nav-link:hover {
+  color: #f8f9fa; /* Light gray text on hover */
+}
+
+.navbar-toggler {
+  border-color: #ffffff; /* White border color for toggler */
+}
+
+.navbar-toggler-icon {
+  background-color: #ffffff; /* White background for toggler icon */
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: #ffffff; /* Active link text color */
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.7); /* Inactive link text color */
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #ffffff; /* Link text color on hover or focus */
+}
